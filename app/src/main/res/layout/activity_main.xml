@@ -31,7 +31,9 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <Button android:text="SPOTIFY STREAMER"
+        <Button
+            android:id="@+id/btnSpotifyStreamer"
+            android:text="SPOTIFY STREAMER"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -58,7 +60,9 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <Button android:text="SCORES APP"
+        <Button
+            android:id="@+id/btnScores"
+            android:text="SCORES APP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -85,7 +89,9 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <Button android:text="LIBRARY APP"
+        <Button
+            android:id="@+id/btnLibrary"
+            android:text="LIBRARY APP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -112,7 +118,9 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <Button android:text="BUILD IT BIGGER"
+        <Button
+            android:id="@+id/btnBuildItBigger"
+            android:text="BUILD IT BIGGER"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -139,7 +147,9 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <Button android:text="XYZ READER"
+        <Button
+            android:id="@+id/btnXyzReader"
+            android:text="XYZ READER"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
@@ -165,7 +175,9 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <Button android:text="CAPSTONE"
+        <Button
+            android:id="@+id/btnCapstone"
+            android:text="CAPSTONE"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
