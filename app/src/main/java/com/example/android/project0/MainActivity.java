@@ -1,6 +1,7 @@
 package com.example.android.project0;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -9,37 +10,36 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+
+    Map<Integer, String> buttons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView btnCapstone;
-        btnCapstone = (TextView) findViewById(R.id.btnCapstone);
-        btnCapstone.setOnClickListener(this);
+        buttons = new HashMap<>();
 
-        TextView btnSpotifyStreamer;
-        btnSpotifyStreamer = (TextView) findViewById(R.id.btnSpotifyStreamer);
-        btnSpotifyStreamer.setOnClickListener(this);
+        buttons.put(R.id.btnSpotifyStreamer, getString(R.string.spotify_app_name));
+        buttons.put(R.id.btnScores, getString(R.string.scores_app_name));
+        buttons.put(R.id.btnLibrary, getString(R.string.library_app_name));
+        buttons.put(R.id.btnBuildItBigger, getString(R.string.buildItBigger_app_name));
+        buttons.put(R.id.btnXyzReader, getString(R.string.xyzReader_app_name));
+        buttons.put(R.id.btnCapstone, getString(R.string.capstone_app_name));
 
-        TextView btnScores;
-        btnScores = (TextView) findViewById(R.id.btnScores);
-        btnScores.setOnClickListener(this);
+        Set<Integer> keys = buttons.keySet();
 
-        TextView btnLibrary;
-        btnLibrary = (TextView) findViewById(R.id.btnLibrary);
-        btnLibrary.setOnClickListener(this);
-
-        TextView btnBuildItBigger;
-        btnBuildItBigger = (TextView) findViewById(R.id.btnBuildItBigger);
-        btnBuildItBigger.setOnClickListener(this);
-
-        TextView btnXyzReader;
-        btnXyzReader = (TextView) findViewById(R.id.btnXyzReader);
-        btnXyzReader.setOnClickListener(this);
+        for(Integer i : keys) {
+            TextView button;
+            button = (TextView) findViewById(i);
+            button.setOnClickListener(this);
+        }
 
     }
 
@@ -69,31 +69,19 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     public void onClick(View v) {
         TextView buttonPressed = (TextView) v;
 
-        CharSequence appName = "unknown";
+        CharSequence appName = getString(R.string.unknown_app_name);
 
-        switch (buttonPressed.getId()) {
-            case R.id.btnSpotifyStreamer:
-                appName = "spotify streamer";
-                break;
-            case R.id.btnScores:
-                appName = "scores";
-                break;
-            case R.id.btnLibrary:
-                appName = "library";
-                break;
-            case R.id.btnBuildItBigger:
-                appName = "build it bigger";
-                break;
-            case R.id.btnXyzReader:
-                appName="xyz reader";
-                break;
-            case R.id.btnCapstone:
-                appName = "capstone";
-                break;
+        Integer button_id = buttonPressed.getId();
+
+        if ( buttons.containsKey(button_id) ) {
+            appName = (String) buttons.get(v.getId());
         }
 
         Context context = getApplicationContext();
-        CharSequence text = "This button will launch my " + appName + " app!";
+
+        Resources res = getResources();
+        String text = String.format(res.getString(R.string.toast_message), appName);
+
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
