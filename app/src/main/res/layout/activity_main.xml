@@ -9,15 +9,17 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:clipChildren="false"
+    android:background="@drawable/pole_dark_wood">
 
     <TextView
         android:text="@string/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="26dp"
-        android:paddingBottom="20dp" />
+        android:textSize="26sp"
+        android:paddingBottom="30dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,13 +35,9 @@
 
         <Button
             android:id="@+id/btnSpotifyStreamer"
-            android:text="SPOTIFY STREAMER"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp"
-            android:layout_weight="4"
-            android:background="@color/udacity_orange" />
+            android:text="@string/button_text_spotifyStreamer"
+            style="@style/SignStyle.RightArrow"
+            android:rotation="-2.0"/>
 
         <View
             android:layout_width="0dp"
@@ -53,7 +51,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="6"
-        android:padding="5dp">
+        android:padding="2dp">
 
         <View
             android:layout_width="0dp"
@@ -62,13 +60,9 @@
 
         <Button
             android:id="@+id/btnScores"
-            android:text="SCORES APP"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp"
-            android:layout_weight="4"
-            android:background="@color/udacity_orange" />
+            android:text="@string/button_text_scoresApp"
+            style="@style/SignStyle.LeftArrow"
+            android:rotation="-2.0"/>
 
         <View
             android:layout_width="0dp"
@@ -79,10 +73,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:orientation="horizontal"
         android:weightSum="6"
-        android:padding="5dp">
+        android:padding="2dp"
+        android:clipChildren="false">
 
         <View
             android:layout_width="0dp"
@@ -91,13 +86,10 @@
 
         <Button
             android:id="@+id/btnLibrary"
-            android:text="LIBRARY APP"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp"
-            android:layout_weight="4"
-            android:background="@color/udacity_orange"/>
+            android:text="@string/button_text_libraryApp"
+            style="@style/SignStyle.LeftArrow"
+            android:background="@drawable/arrow_pointing_left_wood_transparent"
+            android:rotation="-5.0"/>
 
         <View
             android:layout_width="0dp"
@@ -120,13 +112,9 @@
 
         <Button
             android:id="@+id/btnBuildItBigger"
-            android:text="BUILD IT BIGGER"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp"
-            android:layout_weight="4"
-            android:background="@color/udacity_orange" />
+            android:text="@string/button_text_buildItBigger"
+            style="@style/SignStyle.RightArrow"
+            android:rotation="4.0"/>
 
         <View
             android:layout_width="0dp"
@@ -137,10 +125,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:orientation="horizontal"
         android:weightSum="6"
-        android:padding="5dp">
+        android:padding="2dp"
+        android:clipChildren="false">
 
         <View
             android:layout_width="0dp"
@@ -149,12 +138,9 @@
 
         <Button
             android:id="@+id/btnXyzReader"
-            android:text="XYZ READER"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_weight="4"
-            android:background="@color/udacity_orange" />
+            android:text="@string/button_text_xyzReader"
+            style="@style/SignStyle.LeftArrow"
+            android:rotation="-5.0"/>
 
         <View
             android:layout_width="0dp"
@@ -168,7 +154,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="6"
-        android:padding="5dp">
+        android:padding="2dp">
 
         <View
             android:layout_width="0dp"
@@ -177,14 +163,15 @@
 
         <Button
             android:id="@+id/btnCapstone"
-            android:text="CAPSTONE"
+            android:text="@string/button_text_capstone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp"
+            android:layout_gravity="top"
+            android:textSize="16sp"
             android:layout_weight="4"
             android:background="#FF0044"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp"/>
 
         <View
             android:layout_width="0dp"

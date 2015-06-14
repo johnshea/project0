@@ -5,4 +5,20 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="SignStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_weight">4</item>
+    </style>
+
+    <style name="SignStyle.LeftArrow">
+        <item name="android:background">@drawable/arrow_pointing_left_wood_transparent</item>
+    </style>
+
+    <style name="SignStyle.RightArrow">
+        <item name="android:background">@drawable/arrow_pointing_right_wood_transparent</item>
+    </style>
+
 </resources>

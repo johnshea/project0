@@ -39,6 +39,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             TextView button;
             button = (TextView) findViewById(i);
             button.setOnClickListener(this);
+            button.setTransformationMethod(null);
         }
 
     }
@@ -74,7 +75,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         Integer button_id = buttonPressed.getId();
 
         if ( buttons.containsKey(button_id) ) {
-            appName = (String) buttons.get(v.getId());
+            appName = buttons.get(v.getId());
         }
 
         Context context = getApplicationContext();
